@@ -235,7 +235,7 @@ body {
 .eye-left, .eye-right {
   position: absolute;
   bottom: 13.3vw;
-  left: 0.8vw;
+  left: 0.5vw;
   width: 0.6vw;
   height: 0.6vw;
   background: #333;
@@ -244,7 +244,7 @@ body {
 }
 
 .eye-right {
-  left: 3.5vw;
+  left: 3.6vw;
   transform: rotate(-64deg);
 }
 
