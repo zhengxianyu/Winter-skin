@@ -4,7 +4,7 @@ body {
 
 .winter-body {
   background: #88acf2;
-  width: 100%;
+  width: 15vw;
   height: 100vh;
   position: fixed;
   overflow: hidden;
@@ -19,12 +19,13 @@ body {
   border-radius: 0 19vw;
   transform: rotate(-52deg);
   border: 0.5vw solid #fff;
+  z-index: 1;
 }
 
 .soil:nth-child(2) {
   position: absolute;
   background: linear-gradient(#adcffb, #7b9ce5);
-  width: 44vw;
+  width: 15vw;
   height: 20vw;
   right: 0;
   bottom: -16vw;
@@ -41,27 +42,26 @@ body {
   bottom: -16vw;
   border-radius: 0 8vw;
   transform: rotate(-28deg);
-  z-index: -1;
 }
 
 .wall {
   position: absolute;
-  bottom: 1vw;
-  width: 17vw;
-  height: 16vw;
+  bottom: 2vw;
+  width: 9vw;
+  height: 10vw;
   background: #333;
-  z-index: -1;
+  box-shadow: 0 0 10px 3px #eee;
 }
 
 .eaves {
   position: absolute;
-  bottom: 15vw;
+  bottom: 12vw;
   width: 0;
   height: 0;
   left: 0;
   border-top: 0vw solid rgba(0,0,0,0);
-  border-right: 26vw solid rgba(0,0,0,0);
-  border-bottom: 7vw solid #fff;
+  border-right: 14vw solid rgba(0,0,0,0);
+  border-bottom: 4vw solid #fff;
   border-left: 0vw solid rgba(0,0,0,0);
   border-bottom-right-radius: 94px;
 }
@@ -69,10 +69,9 @@ body {
 .snow, .snowQuike, .snowSlow {
   position: absolute;
   background: #fff;
-  border: 6px solid #fff;
   border-radius: 15vw;
   top: -1vw;
-  animation: snowMove 10s linear infinite;
+  z-index: 2;
 }
 
 .snowQuike {
@@ -92,11 +91,10 @@ body {
 
 .window {
   position: absolute;
-  bottom: 8vw;
-  width: 5vw;
-  height: 5vw;
+  bottom: 7vw;
+  width: 4vw;
+  height: 4vw;
   background: #fff;
-  z-index: -1;
 }
 
 .window::after {
@@ -115,23 +113,23 @@ body {
 
 .pole, .pole-second {
   position: absolute;
-  bottom: 10.5vw;
-  width: 5vw;
-  height: 0.3vw;
+  bottom: 9vw;
+  width: 4vw;
+  height: 0.2vw;
   background: black;
 }
 
 .pole-second {
   transform: rotate(90deg);
-  bottom: 10.35vw;
+  bottom: 8.9vw;
 }
 
 .chimney {
   position: absolute;
-  bottom: 19vw;
-  width: 3vw;
-  height: 2vw;
-  left: 6vw;
+  bottom: 13.2vw;
+  width: 2vw;
+  height: 1.5vw;
+  left: 7vw;
   background: #fff;
 }
 
@@ -142,11 +140,11 @@ body {
   border-radius: 50px;
   position: absolute;
   top: 3vw;
-  animation: FlyMove 35s linear infinite;
+  animation: FlyMove 10s linear infinite;
 }
 
 .cloud-three {
-  animation: FlyMove 38s linear infinite;
+  animation: FlyMove 13s linear infinite;
 }
 
 .cloud-one::before, .cloud-two:before, .cloud-three:before {
@@ -164,7 +162,7 @@ body {
 .cloud-two {
   top: 5vw;
   left: 10vw;
-  animation: FlyMove 37s linear infinite;
+  animation: FlyMove 15s linear infinite;
 }
 
 .cloud-two, .cloud-two::before, .cloud-one, .cloud-one::before {
@@ -181,8 +179,14 @@ body {
     transform: translateX(-15vw);
 	}
 	to {
-    transform: translateX(100vw);
+    transform: translateX(15vw);
 	}
+}
+
+.snow-man {
+  position: absolute;
+  bottom: 1vw;
+  left: 5vw;
 }
 
 .snow-man .body {
@@ -190,41 +194,43 @@ body {
   bottom: 0;
   border: 1px solid #fff;
   width: 10vw;
-  height: 10.5vw;
-  left: 34vw;
+  height: 9.5vw;
+  left: -2.5vw;
   background: #fff;
   border-radius: 5vw;
+  box-shadow: 1px 1px 10px 1px #fff;
 }
 
 .snow-man .head {
   position: absolute;
-  bottom: 10vw;
+  bottom: 9vw;
   border: 1px solid #fff;
   width: 7vw;
   height: 7vw;
-  left: 35.5vw;
+  left: -1vw;
   background: #fff;
   border-radius: 5vw;
+  box-shadow: 1px 1px 10px 1px #fff;
 }
 
 .button-one, .button-two {
   position: absolute;
-  bottom: 7vw;
-  left: 38.7vw;
+  bottom: 6.5vw;
+  left: 2.2vw;
   border: 0.4vw solid #333;
   border-radius: 5vw;
 }
 
 .button-two {
-  bottom: 4.6vw;
-  left: 38.6vw;
+  bottom: 4.5vw;
+  left: 2.1vw;
   border: 0.5vw solid #333;
 }
 
 .eye-left, .eye-right {
   position: absolute;
-  bottom: 14.3vw;
-  left: 37.3vw;
+  bottom: 13.3vw;
+  left: 0.8vw;
   width: 0.6vw;
   height: 0.6vw;
   background: #333;
@@ -233,22 +239,22 @@ body {
 }
 
 .eye-right {
-  left: 40vw;
+  left: 3.5vw;
   transform: rotate(-64deg);
 }
 
 .nose {
   position: absolute;
-  bottom: 12.6vw;
-  left: 37.7vw;
+  bottom: 11.6vw;
+  left: 1.2vw;
   border: 0.5vw solid;
   border-color: transparent orange transparent transparent;
 }
 
 .smile {
   position: absolute;
-  bottom: 11.5vw;
-  left: 37.3vw;
+  bottom: 10.5vw;
+  left: 0.8vw;
   border-bottom: 1px solid #333;
   width: 3vw;
   height: 3vw;
@@ -257,23 +263,24 @@ body {
 
 .hat {
   position: absolute;
-  bottom: 16vw;
-  left: 35vw;
+  bottom: 15vw;
+  left: -1.5vw;
   width: 8vw;
   height: 0.5vw;
   background: #333;
   border-radius: 118vw;
   z-index: 1;
+  box-shadow: 1px 4px 6px -1px #222;
 }
 
 .hat-top {
   position: absolute;
-  bottom: 16vw;
-  left: 36.5vw;
+  bottom: 15vw;
   width: 5vw;
   height: 3vw;
   background: #333;
   z-index: 1;
+  box-shadow: 0px -2px 6px 1px #fff;
 }
 
 .hat-top::after {
@@ -283,12 +290,13 @@ body {
   background: lightpink;
   position: absolute;
   top: 1.5vw;
+  box-shadow: 0px 17px 6px 1px #fff;
 }
 
 .red-face-left, .red-face-right {
   position: absolute;
-  left: 36vw;
-  bottom: 13.2vw;
+  left: -0.5vw;
+  bottom: 12.2vw;
   width: 1vw;
   height: 1vw;
   background: pink;
@@ -296,17 +304,18 @@ body {
 }
 
 .red-face-right {
-  left: 41vw;
+  left: 4.5vw;
 }
 
 .scarf {
   position: absolute;
-  bottom: 9.5vw;
-  left: 35.5vw;
+  bottom: 8.5vw;
+  left: -1vw;
   width: 7vw;
   height: 1.5vw;
   background: lightpink;
   border-radius: 4px;
+  box-shadow: 1px 2px 9px 1px #ddd;
 }
 
 .scarf::after {
@@ -318,4 +327,32 @@ body {
   bottom: -1.2vw;
   background: lightpink;
   border-radius: 4px;
+}
+
+.house {
+  position: absolute;
+  bottom: 19.2vw;
+}
+
+.sky-color-one {
+  position: absolute;
+  width: 15vw;
+  height: 1.5vw;
+  background: #6a9bec;
+}
+
+.sky-color-two {
+  position: absolute;
+  width: 15vw;
+  height: 4vw;
+  top: 1.5vw;
+  background: linear-gradient(#7cabf9, #6a9bec);
+}
+
+.sky-color-three {
+  position: absolute;
+  width: 15vw;
+  height: 6vw;
+  top: 5.5vw;
+  background: #7cabf9;
 }
