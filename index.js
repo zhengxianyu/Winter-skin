@@ -1,4 +1,6 @@
 $(function() {
+  console.log("==navigator.userAgent::")
+  console.log(navigator)
   function numberRandom(max, min) {
     var num = ( Math.random() * ( max - min ) + min ).toFixed( 2 )
     return num;
